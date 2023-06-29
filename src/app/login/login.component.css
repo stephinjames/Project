@@ -1,0 +1,9 @@
+
+.input-group {
+    display: flex;
+  }
+  
+  .password-view-icon {
+    margin-left: 20px;
+    /* Add additional styling properties as needed */
+  }

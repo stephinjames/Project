@@ -1,0 +1,99 @@
+<div style="height: 100%; background-image: linear-gradient(to bottom right, #ff45ff, #1f2dc7);">
+
+    <div class="container  " style=" justify-content:center;">
+
+        <div class="row ">
+
+
+            <div class="col p-5">
+                <div class="mt-5 ">
+
+
+                    <div class="h-100 d-inline-block w-75 card rounded-5 mb-3 pt-3">
+                        <h3 class="text-center fs-1 mb-3 fw-bold">in time <img
+                                src="../../assets/images/Group 188343.svg" class="img-fluid"
+                                style="max-width: 85px; height: 35px;"> </h3>
+
+                        <h4 class="text-center mb-3">Sign in </h4>
+                        <div class="row">
+                            <div class="col text-center">
+                                <button class="ms-2 p-1 fs-auto me-1 btn btn-light btn-outline-info text-center"
+                                    style="width: auto;"> <img src="../../assets/images/Microsoft.png"> &nbsp; <a> Sign
+                                        in with Microsoft </a></button>
+                            </div>
+                            <div class="col ">
+                                <button class="ms-1 p-1 fs-auto me-1 btn btn-white btn-outline-info text-center"> <img
+                                        src="../../assets/images/Google.svg"> &nbsp; <a> Sign in with Google </a>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <p class=" mb-1 p-2 text-center">Or</p>
+
+                        <form class="px-4 py-3 p-3"  (ngSubmit)="signIn()">
+                            <div class="mb-3">
+                                <label class="form-label ">Email address</label>
+                                <input type="email" [(ngModel)]="inputValueEmail" name="inputValueEmail"
+                                    class="form-control border border-info" placeholder="Enter Email address" required>
+                                <div *ngIf="!inputValueEmail && signInClicked" class="text-danger mt-1">Email address is
+                                    required.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <div class="input-group">
+                                    <input [type]="showPassword ? 'text' : 'password' "
+                                        class="form-control border border-info" placeholder=" Enter Password"
+                                        [(ngModel)]="inputValuePass" name="inputValuePass" required>
+
+                                    <div class="input-group-append p-2 border border-info" (click)="showHide()">
+                                        <span class="input-group-lg">
+                                            <img *ngIf="!showPassword" src="../../assets/images/Password View.svg">
+                                            <img *ngIf="showPassword" src="../../assets/images/Passwordhide.svg">
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                <div *ngIf="!inputValuePass && signInClicked" class="text-danger mt-1">Password is
+                                        required.</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 ">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input">
+                                            <label class="form-check-label">
+                                                Remember me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <a href="" class="ms-5 text-decoration-none text-info"> Forget Password ?</a>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-control">Sign
+                                in</button>
+                        </form>
+                        <div>
+                            <p class="text-center">Need an account? <span class="text-info"> Join "in time pro" for Free
+                                </span></p>
+
+                            <p class="text-center">By continuing I agree to <span class="text-info">Terms of
+                                    Service</span> </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="col">
+                card 2
+            </div>
+        </div>
+    </div>
+</div>
