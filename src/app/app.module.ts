@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { ComponentNameComponent } from './component-name/component-name.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForgetPasswardComponent } from './forget-passward/forget-passward.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     ComponentNameComponent,
     LoginComponent,
+    ForgetPasswardComponent,
   ],
   imports: [
     BrowserModule,

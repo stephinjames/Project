@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+
 export class LoginComponent {
   emailId: string = "Step@gmail.com";
   password: string = "Stephin@123";
@@ -12,6 +15,16 @@ export class LoginComponent {
   inputValuePass: string = '';
   showPassword: boolean = false;
   signInClicked: boolean = false;
+
+  constructor(private router:Router){
+
+  }
+
+  navigateToForgot() {
+    debugger
+    this.router.navigate(['/forgetpassword']);
+    debugger
+  }
 
   showHide(): void {
     this.showPassword = !this.showPassword;
